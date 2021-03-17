@@ -1,11 +1,10 @@
-.App {
-  text-align: center;
+.prueba {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* .App {
+ background-color: black;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
