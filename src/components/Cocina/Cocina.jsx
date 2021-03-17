@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Almuerzo = () => {
+const Cocina = () => {
     return (
         <div>
             <h2>  COCINA EN CONSTRUCCION</h2>
@@ -11,4 +11,4 @@ const Almuerzo = () => {
 
 }
 
-export default Almuerzo;
+export default Cocina;

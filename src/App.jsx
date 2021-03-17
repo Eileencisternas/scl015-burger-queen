@@ -5,25 +5,26 @@ import {
   Route,
   Link,
   } from 'react-router-dom'
-import Almuerzo from './components/Almuerzo/Almuerzo';
+import OpcionesMesero from './components/Mesero/Mesero';
 import Home from './components/Home/Home';
+import Cocina from './components/Cocina/Cocina';
 
 function App() {
   return (
        <Router>
-         <Link to="/"></Link>
-         <Link to="/Home" >Mesera</Link>
-         <Link to="/Almuerzo">Cocina</Link>
+         {/* <Link to="/">Inicio</Link>
+         <Link to="/Mesero" >Mesera</Link>
+         <Link to="/Cocina">Cocina</Link> */}
          <Switch>
          <Route exact path="/">
-       
-           </Route>
-           <Route path="/Home" > 
             <Home></Home>
+           </Route>
+           <Route path="/Mesero" > 
+            <OpcionesMesero></OpcionesMesero>
             
            </Route>
-           <Route path="/Almuerzo"> 
-           <Almuerzo></Almuerzo>
+           <Route path="/Cocina"> 
+           <Cocina></Cocina>
             
            </Route>
            
