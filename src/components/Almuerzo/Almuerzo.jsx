@@ -4,7 +4,8 @@ import React from 'react'
 const Almuerzo = () => {
     return (
         <div>
-            <h2>  COCINA EN CONSTRUCCION</h2>
+            <h2 className="btn btn-danger">  Componente Almuerzo</h2>
+         
 
         </div>
     )

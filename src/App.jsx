@@ -1,32 +1,31 @@
 // import './App.css';
+import Cocina from './components/Cocina/Cocina';
+import Home from './components/Home/Home.jsx';
+import Desayunos from './components/Desayunos/Desayunos'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   } from 'react-router-dom'
-import Almuerzo from './components/Almuerzo/Almuerzo';
-import Home from './components/Home/Home';
 
 function App() {
   return (
        <Router>
-         <Link to="/"></Link>
-         <Link to="/Home" >Mesera</Link>
-         <Link to="/Almuerzo">Cocina</Link>
-         <Switch>
-         <Route exact path="/">
-       
+        
+        <Switch>
+          <Route path="/Home">
+          <Home></Home>
            </Route>
-           <Route path="/Home" > 
-            <Home></Home>
-            
+           <Route path="/Cocina" > 
+           <Cocina></Cocina>
            </Route>
-           <Route path="/Almuerzo"> 
-           <Almuerzo></Almuerzo>
-            
+           <Route path="/Desayunos" > 
+           <Desayunos></Desayunos>
            </Route>
-           
+           <Route exact path="/"> 
+           <Home></Home>
+          </Route>
+                     
          </Switch>
        </Router>
   );
