@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  
   } from 'react-router-dom'
-import OpcionesMesero from './components/Mesero/Mesero';
+import Mesero from './components/Mesero/Mesero';
 import Home from './components/Home/Home';
 import Cocina from './components/Cocina/Cocina';
 
@@ -20,7 +20,7 @@ function App() {
             <Home></Home>
            </Route>
            <Route path="/Mesero" > 
-            <OpcionesMesero></OpcionesMesero>
+            <Mesero></Mesero>
             
            </Route>
            <Route path="/Cocina"> 
