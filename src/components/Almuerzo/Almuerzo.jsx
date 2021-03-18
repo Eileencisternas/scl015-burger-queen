@@ -11,10 +11,10 @@ import {
 
 function Almuerzo (params) {
     let arr = [
-        { id: 1, titulo: "Burguer Simple", precio: 1500 },
-        { id: 2, titulo: "Burguer doble", precio: 3000 },
-        { id: 3, titulo: "Aros de Cebolla", precio: 5000 },
-        { id: 4, titulo: "Papas Fritas", precio: 700 },
+        { id: 1, titulo: "Burguer Simple", precio: 1500, image: "icon-burguersimple.png" },
+{ id: 2, titulo: "Burguer doble", precio: 3000, image: "icon-burguerdoble.png" },
+{ id: 3, titulo: "Aros de Cebolla", precio: 5000, image: "icon-onionrings.png" },
+{ id: 4, titulo: "Papas Fritas", precio: 700, image: "icon-papasfritas.png" },
     ];
     return (
         <div>

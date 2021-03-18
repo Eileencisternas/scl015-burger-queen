@@ -4,9 +4,11 @@ class Productos extends Component {
     state = {}
     render() {
         console.log("parametros", this.props);
-        return (
+        let path = `./../asset/images/${this.props.parametros.image}`;
+         return (
             <div className="producto">
-                <img></img>
+                
+                <img src={path} />
                 <h4 className="ItemsOne"> {this.props.parametros.titulo}</h4>
                 <h5 className="Itemstwo">{this.props.parametros.precio}</h5>
             </div>

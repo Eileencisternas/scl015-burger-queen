@@ -13,14 +13,12 @@
   position: relative;
   width: 200px;
   height: 55px;
-  top: 16px;
+  top: 30px;
   justify-content: center;
   padding-left: 5px;
   margin-left: 55px;
 }
-.container-productos{
-    display: flex;
-}
+
 .BtnAlmuerzo {
   appearance: none;
   background: black;
@@ -39,28 +37,32 @@
   margin-left: 25px;
   width: 200px;
   height: 55px;
-  top: 16px;
+  top: 30px;
 }
 .container-productos{
     display: flex;
-    margin-top: 20px;
-    padding-top: 30px;
+    flex-direction: wrap;
+    margin-top: 40px;
+    padding-top: 60px;
     margin-left: 5px;
+    
         text-align: -webkit-center;
 
 }
 .producto {
-   appearance: none; 
   background: #f3cc00;
+  flex-direction: row;
+   justify-content: center;
   color: black;
   font-family: Livvic;
   font-style: normal;
   font-weight: bold;
-  border-radius: 15px;
-  width: 150px;
-  height: 142.33px;
+  width: 160px;
+  height: 130.33px;
   left: 81px;
   top: calc(50% - 142.33px / 2 - 122.36px);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+  margin: 8px;
+  
 }
