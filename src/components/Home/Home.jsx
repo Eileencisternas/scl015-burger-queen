@@ -1,50 +1,39 @@
 import React from 'react'
-// import Almuerzo from '../Almuerzo/Almuerzo'
-// import Desayunos from '../Desayunos/Desayunos'
-import {
-  Link,
-  NavLink
-  } from 'react-router-dom'
-import './Home.css';
-import logoInit from './imgApp/logoInit.png';
+import { useHistory } from 'react-router-dom';
+import  './Home.css';
+import proyecto6 from './ImgHome/proyecto6.png'
+
 const Home = () => {
+    const history = useHistory();
+    const OnclickBtnHome1 = (e) =>{
+        history.push('/Mesero');
+    };
+    const OnclickBtnHome2 = (e) =>{
+        history.push('/Cocina');
+    };
+    const date = new Date();
+      const fecha = `${(`00${date.getDate()}`).slice(-2)}/${(`00${date.getMonth() + 1}`).slice(-2)}/${
+        date.getFullYear()}`;
+      const hora= `${(`00${date.getHours()}`).slice(-2)}:${(`00${date.getMinutes()}`).slice(-2)}:${
+        (`00${date.getSeconds()}`).slice(-2)}`;
     return (
-      <div>
-      <div className="fondoInit">
-      <div className="fondoInit">
-        <div className="btnInic">
-        <Link to="/" ></Link>
-        <Link to="/Desayunos" className="btnMesera" >Mesera</Link>
-        <NavLink to="/Cocina" className="btn btn-dark" activeclassName="active">Cocina</NavLink>
-       </div>
-     </div>
-     <div className="divLogo">
-       <img  className="logoInit" src={logoInit} alt="logo" />
-     </div>
-     </div>
-        {/* <div className="container" >
-            <div>
-            <h2>Mesero:</h2>
+        <div className="Home" >
+            <div className="Home-Header">
+                <p>Fecha: {fecha}<br></br>
+                   Hora: {hora}
+                </p>
+                
+            </div>
+           <div className="Home-Body">
+               <button type="button" className="Home-Button" onClick={OnclickBtnHome1}>Mesero</button>
+               <button type="button" className="Home-Button" onClick={OnclickBtnHome2}>Cocina</button>
            </div>
-           <div>
-            <h2>Nombre de Cliente:</h2>
+           <div className="HomeDivLogo">
+               <img className="Img-Home" src= {proyecto6} alt=""/>
            </div>
-           <div>
-            <h2>Numero de Mesa:</h2>
-           </div>
-            <div className="row">
-                <div className="col">
-                    <h2 className="col">Menu</h2>
-                    <Desayunos></Desayunos>
-                    <Almuerzo></Almuerzo>
-                </div>
-                <div className="col">
-                  <h2>Monto Total</h2>
-                </div>
-                </div>         
-           </div> */}
         </div>
     )
 }
+
 
 export default Home;
