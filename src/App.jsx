@@ -8,6 +8,7 @@ import {
 import Mesero from './components/Mesero/Mesero';
 import Home from './components/Home/Home';
 import Cocina from './components/Cocina/Cocina';
+import Almuerzo from './components/Almuerzo/Almuerzo';
 
 function App() {
   return (
@@ -27,7 +28,10 @@ function App() {
            <Cocina></Cocina>
             
            </Route>
-           
+        <Route path="/Almuerzo">
+          <Almuerzo></Almuerzo>
+
+        </Route>
          </Switch>
        </Router>
   );
