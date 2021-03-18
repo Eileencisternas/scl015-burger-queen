@@ -1,12 +1,7 @@
 import React from 'react'
 import Productos from '../Productos/Productos';
 import './Desayuno.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from 'react-router-dom'
+
 
 
 function Desayuno(params) {
