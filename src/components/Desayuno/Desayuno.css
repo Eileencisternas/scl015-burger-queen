@@ -1,0 +1,66 @@
+.BtnDesayuno {
+  appearance: none;
+  background: black;
+  color: white;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 15px;
+  outline: none;
+  position: relative;
+  width: 200px;
+  height: 55px;
+  top: 16px;
+  justify-content: center;
+  padding-left: 5px;
+  margin-left: 55px;
+}
+.container-productos{
+    display: flex;
+}
+.BtnAlmuerzo {
+  appearance: none;
+  background: black;
+  color: white;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 15px;
+  outline: none;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 25px;
+  width: 200px;
+  height: 55px;
+  top: 16px;
+}
+.container-productos{
+    display: flex;
+    margin-top: 20px;
+    padding-top: 30px;
+    margin-left: 5px;
+        text-align: -webkit-center;
+
+}
+.producto {
+   appearance: none; 
+  background: #f3cc00;
+  color: black;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 150px;
+  height: 142.33px;
+  left: 81px;
+  top: calc(50% - 142.33px / 2 - 122.36px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}

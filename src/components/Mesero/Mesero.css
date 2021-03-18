@@ -155,3 +155,24 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
 }
+
+.BtnAlmuerzo {
+  appearance: none;
+  background: black;
+  color: white;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 15px;
+  outline: none;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 25px;
+  width: 200px;
+  height: 55px;
+  top: 16px;
+}
