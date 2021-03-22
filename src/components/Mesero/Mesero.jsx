@@ -3,6 +3,7 @@ import proyecto6 from '../Home/ImgHome/proyecto6.png'
 import "./Mesero.css"
 import Desayunos from '../Desayuno/Desayuno'
 import Almuerzo from '../Almuerzo/Almuerzo';
+import Navegacion from '../../Navegacion';
 
 
 const Mesero = () => {
@@ -23,9 +24,9 @@ const Mesero = () => {
                 </div>
                 <div className="Mesero-options">
                     <div className="Mesero-productos">
-                        <button className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
+                        <button style={tipo === 'Desayuno' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
                        
-                        <button className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
+                        <button style={tipo === 'Almuerzo' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
                     
                         {tipo === 'Desayuno'?  <Desayunos/> : <Almuerzo/>}
 
@@ -33,7 +34,7 @@ const Mesero = () => {
                     </div>
                     <div className="Mesero-pedido">
                         <div className="Mesero-listado">
-                            <p>aqui va el contenido del pedido</p>
+                        <Navegacion/>
                             
                         </div>
                         <div className="btns-pedido">

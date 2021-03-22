@@ -7,15 +7,31 @@ import './Almuerzo.css';
 function Almuerzo (params) {
     let arr = [
         { id: 1, titulo: "Burguer Simple", precio: 1500, image: "icon-burguersimple.png" },
-{ id: 2, titulo: "Burguer doble", precio: 3000, image: "icon-burguerdoble.png" },
-{ id: 3, titulo: "Aros de Cebolla", precio: 5000, image: "icon-onionrings.png" },
-{ id: 4, titulo: "Papas Fritas", precio: 700, image: "icon-papasfritas.png" },
+        { id: 2, titulo: "Burguer doble", precio: 3000, image: "icon-burguerdoble.png" },
+        { id: 3, titulo: "Agua 500ml", precio: 500, image: "icon-onionrings.png" },
+        { id: 4, titulo: "Agua 750ml", precio: 700, image: "icon-papasfritas.png" },
     ];
+    let acom = [
+        { id: 5, titulo: "Aros de cebolla", precio: 500, image: "icon-burguersimple.png" },
+        { id: 6, titulo: "Papas fritas", precio: 700, image: "icon-burguerdoble.png" },
+        { id: 7, titulo: "Bebida 500ml", precio: 700, image: "icon-onionrings.png" },
+        { id: 8, titulo: "Bebida 750ml", precio: 1000, image: "icon-papasfritas.png" },
+    ]
     return (
         <div>
-         
+           <span className="spanBurger">Hamburguesas</span>
+           <span className="spanBebidas">Bebidas</span>
+           <div className="linea-vertical"></div>
+           <div className="linea-horizontal"></div>
             <div className="container-productos" >
                 {arr.map((elemento) => (
+                    <Productos key={elemento.id} parametros={elemento} />
+                ))}
+            </div>
+            <span className="spanAcomp">Acompañamientos</span>
+            <div className="linea-horizontal2"></div>
+            <div className="container-productos2" >
+                {acom.map((elemento) => (
                     <Productos key={elemento.id} parametros={elemento} />
                 ))}
             </div>
