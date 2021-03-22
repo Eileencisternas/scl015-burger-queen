@@ -1,0 +1,178 @@
+.Mesero-header{
+    background: #F3B700;
+}
+.Logo-Mesero{
+    width: 92px;
+    position: relative;
+    left: 30px;
+}
+.Mesero-body{
+    background: #EEEEEE;
+    height: 895px;
+}
+.Mesero-datos{
+    display: flex;
+    justify-content: center;
+    place-content: space-evenly;
+}
+.input-mesero{
+    appearance: none;
+    background: black;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+    outline: none;
+    position: relative;
+    width: 250px;
+    height: 55px;
+    top: 16px;
+}
+.input-mesero::placeholder{
+    outline: none;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+}
+.input-mesa{
+    appearance: none;
+    background: black;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+    outline: none;
+    position: relative;
+    width: 250px;
+    height: 55px;
+    top: 16px;
+}
+.input-mesa::placeholder{
+    outline: none;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+}
+.input-cliente{
+    appearance: none;
+    background: black;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+    outline: none;
+    position: relative;
+    width: 250px;
+    height: 55px;
+    top: 16px;
+}
+.input-cliente::placeholder{
+    outline: none;
+    color: white;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 15px;
+}
+.Mesero-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+.Mesero-pedido{
+    position: relative;
+    width: 423px;
+    height: 457.11px;
+    background: #FEFEFE;
+    border-radius: 15px;
+    left: 10px;
+}
+.Mesero-productos{
+    position: relative;
+    width: 552px;
+    height: 523px;
+    top: 10px;
+    background: #D8D7D7;
+    border-radius: 15px;
+}
+.btns-pedido{
+    top: 465px;
+    position: absolute;
+}
+.enviar-cocina{
+    position: relative;
+    width: 200px;
+    height: 65px;
+    background: #78BB55;
+    border-radius: 15px;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+.cancelar-pedido{
+    position: relative;
+    width: 200px;
+    height: 65px;
+    left: 20px;
+    background: #FF0000;
+    border-radius: 15px;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.BtnAlmuerzo {
+  appearance: none;
+  background: black;
+  color: white;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 15px;
+  outline: none;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 25px;
+  width: 200px;
+  height: 55px;
+  top: 16px;
+}

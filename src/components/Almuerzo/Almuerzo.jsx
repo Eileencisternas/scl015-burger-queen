@@ -1,35 +1,26 @@
-import { Fragment, useState } from "react";
 import React from 'react'
+import Productos from '../Productos/Productos';
+import './Almuerzo.css';
 
 
-const Almuerzo = () => {
 
-    const [almuerzo, setAlmuerzo] = useState([
-        { id: 1, nombre: 'Burger Simple', precio: 1500},
-        { id: 2, nombre: 'Burger Doble', precio: 3000},
-        { id: 3, nombre: 'Agua 500ml', precio: 500},
-        { id: 4, nombre: 'Agua 700ml', precio: 700},
-        { id: 5, nombre: 'Aros de cebolla', precio: 500},
-        { id: 6, nombre: 'Papas Fritas', precio: 700},
-        { id: 6, nombre: 'Bebida 500ml', precio: 700},
-        { id: 6, nombre: 'Bebida 750ml', precio: 1000},
-       
-    ]);
-
-    const [cart, setCart] = useState([])
-
+function Almuerzo (params) {
+    let arr = [
+        { id: 1, titulo: "Burguer Simple", precio: 1500, image: "icon-burguersimple.png" },
+{ id: 2, titulo: "Burguer doble", precio: 3000, image: "icon-burguerdoble.png" },
+{ id: 3, titulo: "Aros de Cebolla", precio: 5000, image: "icon-onionrings.png" },
+{ id: 4, titulo: "Papas Fritas", precio: 700, image: "icon-papasfritas.png" },
+    ];
     return (
-
-        <Fragment>
-         <h3>Almuerzo</h3>
-         {almuerzo.map((almuerzo) =>
-         <almuerzo
-         )}
-
-
-        </Fragment>
-
-    )
+        <div>
+         
+            <div className="container-productos" >
+                {arr.map((elemento) => (
+                    <Productos key={elemento.id} parametros={elemento} />
+                ))}
+            </div>
+        </div>
+    );
 
 }
 
