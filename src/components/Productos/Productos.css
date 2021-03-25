@@ -1,14 +1,29 @@
-
-
-.ItemsOne{
-    font-size: 14px;
-    text-align: center;
-    justify-content: center;
-    
+.ItemsOne {
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
 }
 
-.Itemstwo{
-    font-size: 24px;
-    text-align: center;
-    justify-content: center;
+.Itemstwo {
+  font-size: 24px;
+  text-align: center;
+  justify-content: center;
+}
+.btn_animated {
+  background-color: rgba(255, 251, 0, 0.5);
+  color: white;
+  border-color: rgb(0, 0, 0);
+  height: 30mm;
+  border-radius: 23px;
+  outline-style: none !important;
+  margin-left: 2mm;
+  transition: all 0.2s ease 0s;
+  box-shadow: 6px 6px 6px black;
+  border-bottom: 5px solid #F3CC00;
+}
+.btn_animated:active {
+    box-shadow: 2px 2px 2px #F3CC00, 0px 0px 5px 0px #F3CC00;
+  transform: translateY(1px);
+  transition: all 0,1s ease 0s;
+
 }

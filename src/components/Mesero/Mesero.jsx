@@ -3,12 +3,34 @@ import proyecto6 from '../Home/ImgHome/proyecto6.png'
 import "./Mesero.css"
 import Desayunos from '../Desayuno/Desayuno'
 import Almuerzo from '../Almuerzo/Almuerzo';
-import CarroCopia from '../Productos/CarroCopia'
-
+import Navegacion from '../../Navegacion';
 
 const Mesero = () => {
     const [tipo, setTipo] = useState('Desayuno');
+    const [listaCarrito, setListaCarrito] = useState([]);
 
+    const agregarHandler = (obj) => {
+        console.log("desde padre", obj);
+        setListaCarrito(listaCarrito.concat(obj))
+    }
+
+    const borraHandler = (indice) => {
+        console.log("borrando:", indice, listaCarrito)
+        //let i = listaCarrito.indexOf(indice);
+    
+        let filteredArray = listaCarrito.filter((_, i) => i !== indice)
+        setListaCarrito(filteredArray )
+    
+   }
+
+   const cantidadHandler = (indice, cantidad) => {
+    console.log("cantidad:", indice, cantidad, listaCarrito)
+    let arregloaux = listaCarrito
+    arregloaux[indice].cantidad= cantidad 
+    console.log("cantidad 22222:", indice, cantidad, arregloaux)
+    setListaCarrito(arregloaux)
+
+   }
     return (
         <div className="Mesero">
             <div className="Mesero-header">
@@ -22,16 +44,19 @@ const Mesero = () => {
                 </div>
                 <div className="Mesero-options">
                     <div className="Mesero-productos">
-                        <button style={tipo === 'Desayuno' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
-                       
-                        <button style={tipo === 'Almuerzo' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
-                    
-                        {tipo === 'Desayuno'?  <Desayunos/> : <Almuerzo/>}
-                   </div>
+                        <button style={tipo === 'Desayuno' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
 
+                        <button style={tipo === 'Almuerzo' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
+
+                        {tipo === 'Desayuno' ? <Desayunos agregarHandler={agregarHandler} listaCarrito={listaCarrito} /> : <Almuerzo agregarHandler={agregarHandler} listaCarrito={listaCarrito} />}
+
+
+                    </div>
                     <div className="Mesero-pedido">
                         <div className="Mesero-listado">
-                      <CarroCopia/>
+                          
+                            <Navegacion listaCarrito={listaCarrito} borraHandler={borraHandler} cantidadHandler={cantidadHandler} />
+
                         </div>
                         <div className="btns-pedido">
                             <button className="enviar-cocina">Enviar a Cocina</button>
