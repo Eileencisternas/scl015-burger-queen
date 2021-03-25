@@ -5,10 +5,7 @@ import './Desayuno.css';
 
 function Desayuno(params) {
 
-    
-
-
-
+    console.log("Desayuno:",params);
     let arr = [
         { id: 1, titulo: "Café Americano", precio: 500, image: "icon-cafeamericano.png" },
         { id: 2, titulo: "Café con leche", precio: 700, image: "icon-cafeconleche.png"},
@@ -19,7 +16,7 @@ function Desayuno(params) {
         <div>
            <div className="container-productos" >
                 {arr.map((elemento) => (
-                    <Productos key={elemento.id} parametros={elemento} />
+                    <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
                 ))}
             </div>
         </div>

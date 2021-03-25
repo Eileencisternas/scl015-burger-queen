@@ -5,6 +5,7 @@ import './Almuerzo.css';
 
 
 function Almuerzo (params) {
+    console.log("Almuerzo:", params);
     let arr = [
         { id: 1, titulo: "Burguer Simple", precio: 1500, image: "icon-burguersimple.png" },
         { id: 2, titulo: "Burguer doble", precio: 3000, image: "icon-burguerdoble.png" },
@@ -25,14 +26,14 @@ function Almuerzo (params) {
            <div className="linea-horizontal"></div>
             <div className="container-productos" >
                 {arr.map((elemento) => (
-                    <Productos key={elemento.id} parametros={elemento} />
+                    <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito}  />
                 ))}
             </div>
             <span className="spanAcomp">Acompañamientos</span>
             <div className="linea-horizontal2"></div>
             <div className="container-productos2" >
                 {acom.map((elemento) => (
-                    <Productos key={elemento.id} parametros={elemento} />
+                    <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
                 ))}
             </div>
         </div>
