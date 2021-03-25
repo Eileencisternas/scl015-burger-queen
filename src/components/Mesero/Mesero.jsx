@@ -6,11 +6,27 @@ import Almuerzo from '../Almuerzo/Almuerzo';
 import Navegacion from '../../Navegacion';
 
 
+
 const Mesero = () => {
     const [tipo, setTipo] = useState('Desayuno');
+    const [listaCarrito, setListaCarrito] = useState([]);
+
+    const agregarHandler = (obj) => {
+        console.log("desde padre", obj);
+        setListaCarrito(listaCarrito.concat(obj))
+    }
+    const borraHandler = (indice) => {
+        console.log("borrando:", indice, listaCarrito)
+        //let i = listaCarrito.indexOf(indice);
+    
+        let filteredArray = listaCarrito.filter((_, i) => i !== indice)
+        setListaCarrito(filteredArray )
+        
 
 
 
+
+    }
     return (
         <div className="Mesero">
             <div className="Mesero-header">
@@ -24,18 +40,19 @@ const Mesero = () => {
                 </div>
                 <div className="Mesero-options">
                     <div className="Mesero-productos">
-                        <button style={tipo === 'Desayuno' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
-                       
-                        <button style={tipo === 'Almuerzo' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
-                    
-                        {tipo === 'Desayuno'?  <Desayunos/> : <Almuerzo/>}
+                        <button style={tipo === 'Desayuno' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
 
-                  
+                        <button style={tipo === 'Almuerzo' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
+
+                        {tipo === 'Desayuno' ? <Desayunos agregarHandler={agregarHandler} listaCarrito={listaCarrito} /> : <Almuerzo agregarHandler={agregarHandler} listaCarrito={listaCarrito} />}
+
+
                     </div>
                     <div className="Mesero-pedido">
                         <div className="Mesero-listado">
-                        <Navegacion/>
-                            
+                          
+                            <Navegacion listaCarrito={listaCarrito} borraHandler={borraHandler} />
+
                         </div>
                         <div className="btns-pedido">
                             <button className="enviar-cocina">Enviar a Cocina</button>
