@@ -3,13 +3,11 @@ import proyecto6 from '../Home/ImgHome/proyecto6.png'
 import "./Mesero.css"
 import Desayunos from '../Desayuno/Desayuno'
 import Almuerzo from '../Almuerzo/Almuerzo';
-import Navegacion from '../../Navegacion';
+import CarroCopia from '../Productos/CarroCopia'
 
 
 const Mesero = () => {
     const [tipo, setTipo] = useState('Desayuno');
-
-
 
     return (
         <div className="Mesero">
@@ -29,13 +27,11 @@ const Mesero = () => {
                         <button style={tipo === 'Almuerzo' ? {background: "rgba(0, 0, 0, 0.5)"} : {background:"black"}} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
                     
                         {tipo === 'Desayuno'?  <Desayunos/> : <Almuerzo/>}
+                   </div>
 
-                  
-                    </div>
                     <div className="Mesero-pedido">
                         <div className="Mesero-listado">
-                        <Navegacion/>
-                            
+                      <CarroCopia/>
                         </div>
                         <div className="btns-pedido">
                             <button className="enviar-cocina">Enviar a Cocina</button>
