@@ -107,14 +107,34 @@
     top: 40px;
 }
 .Mesero-pedido{
-    position: relative;
+    margin-top: 10px;
+   margin-left: 10px;
     width: 423px;
     height: 457.11px;
     background: #FEFEFE;
     border-radius: 15px;
     left: 10px;
-    overscroll-behavior-y: auto;
+    overflow: scroll;
 }
+/* width */ 
+::-webkit-scrollbar{
+  width: 20px;
+  height: 0px;
+}
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px #f3b700;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #f3b700;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #f3b700;
+}
+
 .Mesero-productos{
     position: relative;
     /* width: 552px; */
@@ -125,11 +145,12 @@
 }
 .btns-pedido{
     top: 465px;
-    /* position: absolute; */
+    position:absolute ;
+   
 }
 .enviar-cocina{
-    position: relative;
-    margin: 5px;
+    position: static;
+     margin: 5px; 
     width: 200px;
     height: 65px;
     background: #78BB55;
@@ -142,6 +163,24 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
 }
+.producto {
+  background: transparent;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: bold;
+  width: 160px;
+  height: 130.33px;
+  left: 81px;
+  top: calc(50% - 142.33px / 2 - 122.36px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin: 8px;
+  border: solid;
+}
+
 .cancelar-pedido{
     /* position: relative; */
     width: 200px;
@@ -181,3 +220,22 @@
 .cantidad {
     font-size: 12pt;
 }
+
+/*formato para Tablet*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait){
+.Mesero-productos{
+    max-width: 60%;
+    overflow: scroll;
+  }
+
+.BtnAlmuerzo{
+    height: 43px;
+    width: 282px;
+}
+.btns-pedido{
+     height: 43px;
+    width: 282px;
+}
+
+}
+

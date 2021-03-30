@@ -40,7 +40,7 @@
   top: 30px;
 }
 .container-productos{
-    display: flex;
+    display: inline-flex;
     flex-direction: wrap;
     margin-top: 40px;
     padding-top: 60px;

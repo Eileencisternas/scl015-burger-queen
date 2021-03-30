@@ -23,7 +23,8 @@ function Almuerzo (params) {
     let acom = [
         { id: 7, titulo: "Aros de cebolla", precio: 500, image: "icon-onionrings.png", agregado: 0 },
         { id: 8, titulo: "Papas fritas", precio: 700, image: "icon-papasfritas.png", agregado: 0 },
-
+    ]
+    let agreg = [
         { id: 13, titulo: "Huevo", precio: 300, image: "huevo.png", agregado: 0, option: 0 },
         { id: 14, titulo: "Queso", precio: 300, image: "queso.png", agregado: 0, option: 0 },
     ]
@@ -55,12 +56,21 @@ function Almuerzo (params) {
                     <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
                 ))}
             </div>
+            <span className="spanAcomp">Agregados</span>
+            <div className="linea-horizontal3"></div>
+            <div className="container-productos3" >
+                {agreg.map((elemento) => (
+                    <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
+                ))}
+            </div>
+            
             <span className="spanAcomp">Bebidas</span>
-            <div className="linea-horizontal2"></div>
-            <div className="container-productos2" >
+            <div className="linea-horizontal4"></div>
+            <div className="container-productos4" >
                 {bebidas.map((elemento) => (
                     <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
                 ))}
+                
             </div>
          </div>
 
