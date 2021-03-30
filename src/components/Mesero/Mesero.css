@@ -113,21 +113,23 @@
     background: #FEFEFE;
     border-radius: 15px;
     left: 10px;
+    overscroll-behavior-y: auto;
 }
 .Mesero-productos{
     position: relative;
     /* width: 552px; */
-    height: 523px;
+    /* height: 523px; */
     top: 10px;
     background: #D8D7D7;
     border-radius: 15px;
 }
 .btns-pedido{
     top: 465px;
-    position: absolute;
+    /* position: absolute; */
 }
 .enviar-cocina{
     position: relative;
+    margin: 5px;
     width: 200px;
     height: 65px;
     background: #78BB55;
@@ -141,7 +143,7 @@
     color: #FFFFFF;
 }
 .cancelar-pedido{
-    position: relative;
+    /* position: relative; */
     width: 200px;
     height: 65px;
     left: 20px;
@@ -175,4 +177,7 @@
   width: 200px;
   height: 55px;
   top: 16px;
+}
+.cantidad {
+    font-size: 12pt;
 }

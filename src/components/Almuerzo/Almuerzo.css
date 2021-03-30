@@ -4,7 +4,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-    display: flex;
+    /* display: flex; */
     align-items: flex-end;
     letter-spacing: 0.05em;
     color: #000000;
@@ -37,18 +37,18 @@
     letter-spacing: 0.05em;
     color: #000000;
     position: absolute;
-    top: 311px;
+    /* top: 311px; */
     left: 30px;
 }
-.linea-vertical{
+/* .linea-vertical{
     border-left: 3px solid rgba(0, 0, 0, 0.12);
     height: 365px;
     position: absolute;
     left: 331px;
     margin-left: -3px;
     top: 156px;
-}
-.linea-horizontal{
+} */
+/* .linea-horizontal{
     position: absolute;
     width: 605px;
     height: 0px;
@@ -63,7 +63,7 @@
     left: 32px;
     top: 334px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
-}
+} */
 .container-productos2{
     display: flex;
     flex-direction: wrap;
