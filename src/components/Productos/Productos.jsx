@@ -65,7 +65,7 @@ const Productos = (params) => {
 
       </button>
             
-      <div>
+      {/* <div>
 
       
       <Modal isOpen={modal} toggle={toggle} >
@@ -82,7 +82,7 @@ const Productos = (params) => {
           
         </ModalFooter>
       </Modal>
-    </div>
+    </div> */}
     </Container>
   );
 }

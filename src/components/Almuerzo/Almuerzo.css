@@ -4,13 +4,13 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-    display: flex;
+    /* display: flex; */
     align-items: flex-end;
     letter-spacing: 0.05em;
     color: #000000;
     position: absolute;
-    margin-top: 30px;
-    left: 30px;
+    margin-top: 70px;
+    left: 40px;
 }
 .spanBebidas{
     font-family: Livvic;
@@ -36,40 +36,78 @@
     align-items: flex-end;
     letter-spacing: 0.05em;
     color: #000000;
-    position: absolute;
-    top: 311px;
     left: 30px;
+    padding: 5px;
+    /* position: absolute; */
+    /* top: 311px; */
+    margin-left: 30px;
 }
-.linea-vertical{
+ /* .linea-vertical{
     border-left: 3px solid rgba(0, 0, 0, 0.12);
     height: 365px;
     position: absolute;
     left: 331px;
     margin-left: -3px;
     top: 156px;
-}
+}  */
 .linea-horizontal{
     position: absolute;
-    width: 605px;
+    width: 900px;
     height: 0px;
     left: 32px;
     top: 148px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
-}
+} 
 .linea-horizontal2{
     position: absolute;
-    width: 296px;
+    width: 900px;
     height: 0px;
     left: 32px;
     top: 334px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
-}
+} 
+.linea-horizontal3{
+    width: 900px;
+    height: 0px;
+    margin-left: 32px;
+    top: 448px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+} 
+.linea-horizontal4{
+    width: 900px;
+    height: 0px;
+    margin-left: 32px;
+    top: 448px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+} 
 .container-productos2{
-    display: flex;
+    display: inline-flex;
     flex-direction: wrap;
-    margin-top: 40px;
+    margin-top: 10px;
+    /* text-align: -webkit-center;  */
+}
+.container-productos3{
+    display: inline-flex;
+    /* flex-direction: wrap; */
+    margin-top: 10px;
+    margin-left: 5px;
+    /* text-align: -webkit-center; */
+}
+.container-productos4{
+    display: inline-flex;
+    flex-direction: wrap;
+    margin-top: 10px;
     margin-left: 5px;
     text-align: -webkit-center;
+}
+.container-productos{
+    display: inline-flex;
+    flex-direction: wrap;
+    margin-top: 40px;
+    padding-top: 60px;
+    margin-left: 5px;
+    text-align: -webkit-center;
+
 }
 .producto {
     background: transparent;
@@ -87,4 +125,13 @@
     border-radius: 15px;
     margin: 8px;
     border: solid;
+}
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait){
+  .producto {
+      
+      max-width: 100%;
+  }
+  .container-productos{
+      max-width: 50%;
+  }
 }
