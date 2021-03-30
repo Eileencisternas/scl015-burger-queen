@@ -7,10 +7,10 @@ function Desayuno(params) {
 
     console.log("Desayuno:",params);
     let arr = [
-        { id: 10, titulo: "Café Americano", precio: 500, image: "icon-cafeamericano.png" },
-        { id: 11, titulo: "Café con leche", precio: 700, image: "icon-cafeconleche.png"},
-        { id: 12, titulo: "Sandwich Jamón y Queso", precio: 1000, image: "icon-sandwich.png"},
-        { id: 13, titulo: "Jugo de frutas", precio: 700, image: "icon-jugodefrutas.png"},
+        { id: 30, titulo: "Café Americano", precio: 500, image: "icon-cafeamericano.png" },
+        { id: 31, titulo: "Café con leche", precio: 700, image: "icon-cafeconleche.png"},
+        { id: 32, titulo: "Sandwich Jamón y Queso", precio: 1000, image: "icon-sandwich.png"},
+        { id: 33, titulo: "Jugo de frutas", precio: 700, image: "icon-jugodefrutas.png"},
     ];
     return (
         <div>
