@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Productos.css"
-import { Container } from 'reactstrap';
+import { Container, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import  ProductosAdicional from './ProductosAdicional'
 
@@ -57,32 +57,29 @@ const Productos = (params) => {
 
   return (
     <Container >
-      {/* {console.log("amarillo", params.listaCarrito.find((elemento)=> elemento.id === params.parametros.id))} */}
-      <button className="producto btn_animated" style={!params.listaCarrito.find((elemento)=> elemento.id === params.parametros.id) ? { background: "transparent" } : { background: "#F3CC00" }}   onClick={boxClick}>
-        <img width="32px" src={require('./../../asset/images/' + params.parametros.image).default} ></img>
-        <h4 className="ItemsOne"> {params.parametros.titulo}</h4>
-        <h5 className="Itemstwo">{params.parametros.precio}</h5>
+     <div className="divBtn-productos">
+        <button className="producto btn_animated" style={!params.listaCarrito.find((elemento)=> elemento.id === params.parametros.id) ? { background: "transparent" } : { background: "#F3CC00" }}   onClick={boxClick}>
+            <img width="32px" src={require('./../../asset/images/' + params.parametros.image).default} ></img>
+            <h4 className="ItemsOne"> {params.parametros.titulo}</h4>
+            <h5 className="Itemstwo">{params.parametros.precio}</h5>
 
-      </button>
+          </button>
+          <FormGroup check>
+              <Label check>
+                <Input type="checkbox" />{' '}
+                  Queso
+              </Label>
+            </FormGroup>
+            <FormGroup check>
+              <Label check>
+                <Input type="checkbox" />{' '}
+                  Huevo
+              </Label>
+            </FormGroup>
+      </div>   
+
             
-      {/* <div>
 
-      
-      <Modal isOpen={modal} toggle={toggle} >
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-        <ModalBody>
-        {acom.map((elemento) => ( <ProductosAdicional  agregarHandler={params.agregarHandler} parametros={elemento} setAdicional={setAdicional} adicional={adicional}  />
-         
-         ))}
-       
-        </ModalBody>
-
-        <ModalFooter>
-          <Button color="primary" onClick={() => agregarCarritoAdicional()}>Agregar a Carrito</Button>
-          
-        </ModalFooter>
-      </Modal>
-    </div> */}
     </Container>
   );
 }

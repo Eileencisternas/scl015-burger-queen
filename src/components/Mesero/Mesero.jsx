@@ -44,10 +44,13 @@ const Mesero = () => {
                 </div>
                 <div className="Mesero-options">
                     <div className="Mesero-productos">
-                        <button style={tipo === 'Desayuno' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
+                        <div className="vistas-productos">
+                            <button style={tipo === 'Desayuno' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnDesayuno" onClick={() => setTipo('Desayuno')}> Desayuno</button>
 
-                        <button style={tipo === 'Almuerzo' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
+                            <button style={tipo === 'Almuerzo' ? { background: "rgba(0, 0, 0, 0.5)" } : { background: "black" }} className="BtnAlmuerzo" onClick={() => setTipo('Almuerzo')}> Almuerzo</button>
 
+                        </div>
+                        
                         {tipo === 'Desayuno' ? <Desayunos agregarHandler={agregarHandler} listaCarrito={listaCarrito} /> : <Almuerzo agregarHandler={agregarHandler} listaCarrito={listaCarrito} />}
 
 

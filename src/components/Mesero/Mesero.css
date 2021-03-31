@@ -28,8 +28,8 @@
     border-radius: 15px;
     outline: none;
     position: relative;
-    width: 250px;
-    height: 55px;
+    width: 184px;
+    height: 40px;
     top: 16px;
 }
 .input-mesero::placeholder{
@@ -38,7 +38,7 @@
     font-family: Livvic;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 13px;
     line-height: 26px;
     text-align: center;
     border-radius: 15px;
@@ -56,8 +56,8 @@
     border-radius: 15px;
     outline: none;
     position: relative;
-    width: 250px;
-    height: 55px;
+    width: 184px;
+    height: 40px;
     top: 16px;
 }
 .input-mesa::placeholder{
@@ -66,7 +66,7 @@
     font-family: Livvic;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 13px;
     line-height: 26px;
     text-align: center;
     border-radius: 15px;
@@ -84,8 +84,8 @@
     border-radius: 15px;
     outline: none;
     position: relative;
-    width: 250px;
-    height: 55px;
+    width: 184px;
+    height: 40px;
     top: 16px;
 }
 .input-cliente::placeholder{
@@ -94,7 +94,7 @@
     font-family: Livvic;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 13px;
     line-height: 26px;
     text-align: center;
     border-radius: 15px;
@@ -146,21 +146,21 @@
 .btns-pedido{
     top: 465px;
     position:absolute ;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .enviar-cocina{
-    position: static;
+    /* position: static; */
      margin: 5px; 
-    width: 200px;
-    height: 65px;
+     width: 176px;
+     height: 56px;
     background: #78BB55;
     border-radius: 15px;
     font-family: Livvic;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.05em;
+    font-size: 16px;
     color: #FFFFFF;
 }
 .producto {
@@ -183,17 +183,15 @@
 
 .cancelar-pedido{
     /* position: relative; */
-    width: 200px;
-    height: 65px;
+    width: 176px;
+    height: 56px;
     left: 20px;
     background: #FF0000;
     border-radius: 15px;
     font-family: Livvic;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.05em;
+    font-size: 16px;
     color: #FFFFFF;
 }
 
@@ -219,6 +217,19 @@
 }
 .cantidad {
     font-size: 12pt;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.vistas-productos{
+ display: flex;
+ justify-content: center;
+}
+.btn {
+    width: 23px;
+    height: 25px;
+    padding: 0 !important;
+    font-size: 12px !important;
+    text-align: -webkit-center;
 }
 
 /*formato para Tablet*/
