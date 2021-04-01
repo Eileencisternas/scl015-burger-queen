@@ -32,7 +32,7 @@ function Almuerzo (params) {
       
         { id: 9, titulo: "Bebida 500ml", precio: 700, image: "icon-soda500ml.png", agregado: 0 },
         { id: 10, titulo: "Bebida 750ml", precio: 1000, image: "icon-soda750ml.png", agregado: 0 },
-        { id: 11, titulo: "Agua 500ml", precio: 500, image: "icon-water750ml.png", agregado: 0 },
+        { id: 11, titulo: "Agua 500ml", precio: 500, image: "icon-water.png", agregado: 0 },
         { id: 12, titulo: "Agua 750ml", precio: 700, image: "icon-water750ml.png", agregado: 0 },
       
        
@@ -56,8 +56,7 @@ function Almuerzo (params) {
                     <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />
                 ))}
             </div>
-            <span className="spanAcomp">Agregados</span>
-            <div className="linea-horizontal3"></div>
+            <span className="spanAgre">Agregados</span>
             <div className="container-productos3" >
                 {agreg.map((elemento) => (
                     <Productos key={elemento.id} parametros={elemento} agregarHandler={params.agregarHandler} listaCarrito={params.listaCarrito} />

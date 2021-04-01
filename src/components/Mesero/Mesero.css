@@ -2,13 +2,14 @@
     background: #F3B700;
 }
 .Logo-Mesero{
-    width: 92px;
+    width: 63px;
     position: relative;
     left: 30px;
 }
 .Mesero-body{
     background: #EEEEEE;
-    height: 895px;
+    height: 936px;
+    padding-top: 58px;
 }
 .Mesero-datos{
     display: flex;
@@ -104,7 +105,7 @@
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: 40px;
+    top: 62px;
 }
 .Mesero-pedido{
     margin-top: 10px;
@@ -115,6 +116,8 @@
     border-radius: 15px;
     left: 10px;
     overflow: scroll;
+    display: flex;
+    justify-content: center;
 }
 /* width */ 
 ::-webkit-scrollbar{
@@ -137,14 +140,14 @@
 
 .Mesero-productos{
     position: relative;
-    /* width: 552px; */
+    width: 677px;
     /* height: 523px; */
     top: 10px;
     background: #D8D7D7;
     border-radius: 15px;
 }
 .btns-pedido{
-    top: 465px;
+    top: 485px;
     position:absolute ;
     display: flex;
     justify-content: center;
@@ -231,8 +234,20 @@
     font-size: 12px !important;
     text-align: -webkit-center;
 }
+.bg-light{
+    display: flex;
+    justify-content: center;
+    background-color: transparent !important;
+}
+.badge{
+    color: black;
+}
+.btn-info{
+    background-color: rgb(243, 204, 0) !important;
+    border-color: rgb(243, 204, 0) !important;
+}
 
-/*formato para Tablet*/
+/* formato para Tablet
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait){
 .Mesero-productos{
     max-width: 60%;
@@ -248,5 +263,5 @@
     width: 282px;
 }
 
-}
+} */
 
