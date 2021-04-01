@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "./Productos.css"
-import { Container, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import  ProductosAdicional from './ProductosAdicional'
+import { Container} from 'reactstrap';
+
 
 
 
@@ -64,18 +63,7 @@ const Productos = (params) => {
             <h5 className="Itemstwo">{params.parametros.precio}</h5>
 
           </button>
-          <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Queso
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Huevo
-              </Label>
-            </FormGroup>
+
       </div>   
 
             

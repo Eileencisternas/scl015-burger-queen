@@ -7,9 +7,9 @@
     /* display: flex; */
     align-items: flex-end;
     letter-spacing: 0.05em;
-    color: #000000;
+    color: brown;
     position: absolute;
-    margin-top: 70px;
+    margin-top: 25px;
     left: 40px;
 }
 .spanBebidas{
@@ -21,7 +21,7 @@
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.05em;
-    color: #000000;
+    color: brown;
     position: absolute;
     margin-top: 30px;
     left: 333px;
@@ -35,24 +35,41 @@
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.05em;
-    color: #000000;
+    color: brown;
     left: 30px;
     padding: 5px;
     /* position: absolute; */
     /* top: 311px; */
     margin-left: 30px;
 }
- /* .linea-vertical{
+.spanAgre{
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.05em;
+    color: brown;
+    left: 30px;
+    padding: 5px;
+    position: absolute;
+    top: 302px;
+    margin-left: 30px;
+    left: 332px;
+}
+ .linea-vertical{
     border-left: 3px solid rgba(0, 0, 0, 0.12);
-    height: 365px;
+    height: 153px;
     position: absolute;
     left: 331px;
     margin-left: -3px;
-    top: 156px;
-}  */
+    top: 356px;
+} 
 .linea-horizontal{
     position: absolute;
-    width: 900px;
+    width: 606px;
     height: 0px;
     left: 32px;
     top: 148px;
@@ -60,21 +77,21 @@
 } 
 .linea-horizontal2{
     position: absolute;
-    width: 900px;
+    width: 606px;
     height: 0px;
     left: 32px;
     top: 334px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
 } 
 .linea-horizontal3{
-    width: 900px;
+    width: 606px;
     height: 0px;
     margin-left: 32px;
     top: 448px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.12);
 } 
 .linea-horizontal4{
-    width: 900px;
+    width: 606px;
     height: 0px;
     margin-left: 32px;
     top: 448px;
@@ -88,10 +105,11 @@
 }
 .container-productos3{
     display: inline-flex;
-    /* flex-direction: wrap; */
     margin-top: 10px;
     margin-left: 5px;
-    /* text-align: -webkit-center; */
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 .container-productos4{
     display: inline-flex;
@@ -101,12 +119,12 @@
     text-align: -webkit-center;
 }
 .container-productos{
-    display: inline-flex;
-    flex-direction: wrap;
+    display: flex;
     margin-top: 40px;
     padding-top: 60px;
     margin-left: 5px;
     text-align: -webkit-center;
+    overflow-x: scroll;
 
 }
 .producto {

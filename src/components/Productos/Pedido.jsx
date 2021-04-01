@@ -76,13 +76,13 @@ const Pedido = (params) => {
             </Button>
 
             <div id="Bagde">
-                <p>Listado de compras</p>
+                {/* <p>Listado de compras</p> */}
                 <Table>
                     <thead>
                         <tr>
                             <th width="150px">#</th>
-                            <th>producto</th>
-                            <th>precio</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
                             <th></th>
                         </tr>
                     </thead>
