@@ -4,6 +4,8 @@ import "./Mesero.css"
 import Desayunos from '../Desayuno/Desayuno'
 import Almuerzo from '../Almuerzo/Almuerzo';
 import Navegacion from '../../Navegacion';
+import Pedido from '../Productos/Pedido';
+import {store} from '../../firebaseconfi'
 
 const Mesero = () => {
     const [tipo, setTipo] = useState('Desayuno');
@@ -31,6 +33,47 @@ const Mesero = () => {
     setListaCarrito(arregloaux)
 
    }
+
+//    const sendKitchen = () => {
+//        console.log(listaCarrito, "lc")
+//         listaCarrito.map((elemento) => {
+//         console.log(elemento, "elemento")
+//         store.collection('orden').add({
+//             state:'Pendiente',
+//             pedido: [elemento.titulo, elemento.cantidad],
+         
+          
+       
+//          }).then(()=>{alert('Pedido enviado a cocina')})
+
+//     })
+   
+//       }
+const sendKitchen = () => {
+    console.log(listaCarrito, "lc")
+   const inputMesero = document.getElementById("mesero");
+   const inputMesa = document.getElementById("mesa");
+   const inputCliente = document.getElementById("cliente");
+     store.collection('orden').add({
+         mesero: inputMesero.value,
+         mesa: inputMesa.value,
+         cliente: inputCliente.value,
+         state:'Pendiente',
+         pedido:  listaCarrito.map(elemento => elemento.cantidad + " " + elemento.titulo ),
+          
+      
+       
+    
+      }).then(()=>{
+          alert('Pedido enviado a cocina');
+          window.location.href = window.location.href; 
+        })
+
+
+
+   }
+
+
     return (
         <div className="Mesero">
             <div className="Mesero-header">
@@ -38,9 +81,9 @@ const Mesero = () => {
             </div>
             <div className="Mesero-body">
                 <div className="Mesero-datos">
-                    <input className="input-mesero" type="text" placeholder="Mesero" />
-                    <input className="input-mesa" type="text" placeholder="N° de mesa" />
-                    <input className="input-cliente" type="text" placeholder="Cliente" />
+                    <input className="input-mesero" type="text" placeholder="Mesero" id="mesero" required/>
+                    <input className="input-mesa" type="text" placeholder="N° de mesa" id="mesa" required />
+                    <input className="input-cliente" type="text" placeholder="Cliente" id="cliente" required />
                 </div>
                 <div className="Mesero-options">
                     <div className="Mesero-productos">
@@ -62,7 +105,7 @@ const Mesero = () => {
 
                         </div>
                         <div className="btns-pedido">
-                            <button className="enviar-cocina">Enviar a Cocina</button>
+                            <button className="enviar-cocina" onClick={()=>sendKitchen()}>  Enviar a Cocina</button>
                             <button className="cancelar-pedido">Cancelar Pedido</button>
                         </div>
                     </div>
