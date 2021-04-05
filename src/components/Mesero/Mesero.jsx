@@ -41,6 +41,11 @@ const Mesero = () => {
         const inputMesero = document.getElementById("mesero");
         const inputMesa = document.getElementById("mesa");
         const inputCliente = document.getElementById("cliente");
+        const date = new Date();
+        const fecha = `${(`00${date.getDate()}`).slice(-2)}/${(`00${date.getMonth() + 1}`).slice(-2)}/${
+          date.getFullYear()}`;
+        const hora= `${(`00${date.getHours()}`).slice(-2)}:${(`00${date.getMinutes()}`).slice(-2)}:${
+          (`00${date.getSeconds()}`).slice(-2)}`;
         if(inputCliente.value.length === 0 || inputMesa.value.length === 0 || inputMesero.value.length === 0)
         {
             alert('Faltan datos por ingresar');
@@ -49,9 +54,10 @@ const Mesero = () => {
                 mesero: inputMesero.value,
                 mesa: inputMesa.value,
                 cliente: inputCliente.value,
+                created: "Fecha: " + fecha + " ;  Hora: " + hora,
                 state:'Pendiente',
                 id: uuid(),
-                pedido:  listaCarrito.map(elemento => elemento.cantidad + " " + elemento.titulo ),
+                pedido:  listaCarrito.map(elemento => elemento.cantidad + "   " + elemento.titulo ),
             
             }).then(()=>{
                 alert('Pedido enviado a cocina');
