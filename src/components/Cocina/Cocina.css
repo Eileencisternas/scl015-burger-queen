@@ -1,0 +1,9 @@
+.boxOrden{
+
+}
+
+.bodyCocina{
+    display: flex;
+    place-content: space-evenly;
+    margin-top: 75px;
+}

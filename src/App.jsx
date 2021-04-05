@@ -6,7 +6,8 @@ import {
   
   } from 'react-router-dom'
 import Mesero from './components/Mesero/Mesero';
-// import Almuerzo from './components/Almuerzo/Almuerzo';
+import CocinaPedidos from './components/Cocina/CocinaPedidos'
+
 
 function App() {
   return (
@@ -18,14 +19,11 @@ function App() {
            <Route path="/Mesero" > 
             <Mesero></Mesero>
            </Route>
-           {/* <Route path="/Mesero/Almuerzo"> 
-           <Almuerzo></Almuerzo>
+           <Route path="/CocinaPedidos" > 
+            <CocinaPedidos></CocinaPedidos>
            </Route>
-        <Route path="/Almuerzo">
-          <Almuerzo></Almuerzo>
 
-        </Route> */}
-         </Switch>
+           </Switch>
        </Router>
   );
 }
