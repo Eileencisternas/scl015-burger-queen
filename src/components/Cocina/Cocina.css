@@ -3,7 +3,7 @@
     display: inline;
     margin-left: 820px;
     color: #ffff;
-    background-color: #24cfaa;
+    background-color: brown;
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     border-color: snow;
     border-radius: 30px;
@@ -13,4 +13,58 @@
     display: flex;
     place-content: space-evenly;
     margin-top: 75px;
+}
+
+.btnPendiente{
+    
+    width: 200px;
+    height: 561px;
+    overflow: scroll;
+}
+
+.btnPreparacion{
+  
+    width: 200px;
+    height: 561px;
+    overflow: scroll;
+
+}
+
+.btnListo{
+   
+    width: 200px;
+    height: 561px;
+    overflow: scroll;
+    
+}
+
+.boxOrden{
+    background-color:rgb(234, 191, 178);
+    border-radius: 8px;
+    margin-bottom: 21px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloPedidos{
+    text-align: center;
+    font-size: 19px;
+    color: brown;
+}
+
+::-webkit-scrollbar {
+    width: 10px !important;
+    height: 0px;
+}
+
+.btnEnvioOrden{
+
+color: #ffff;
+background-color: brown;
+box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+border-color: snow;
+border-radius: 30px;
 }
