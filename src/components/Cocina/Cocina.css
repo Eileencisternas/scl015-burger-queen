@@ -1,5 +1,12 @@
-.boxOrden{
-
+.btnReturn{
+    position: relative;
+    display: inline;
+    margin-left: 820px;
+    color: #ffff;
+    background-color: #24cfaa;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    border-color: snow;
+    border-radius: 30px;
 }
 
 .bodyCocina{

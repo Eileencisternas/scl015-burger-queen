@@ -5,15 +5,14 @@ import { useHistory } from "react-router-dom";
 import proyecto6 from "../Home/ImgHome/proyecto6.png";
 import "./Cocina.css";
 
+
 const CocinaPedidos = () => {
   const [data, setData] = useState([]);
-  const [preparacion, setPreparacion] = useState([]);
+  const [preparacion, setPreparacion] = useState('');
   const history = useHistory();
 
   useEffect(() => {
-    store
-      .collection("orden")
-      .get()
+    store.collection("orden").get()
       .then((querySnapshot) => {
         const docs = [];
         querySnapshot.forEach((doc) => {
@@ -24,19 +23,33 @@ const CocinaPedidos = () => {
 
   }, []);
 
-  console.log(data, "data");
+  // console.log(data, "data");
+
+  // const PendienteToPrepare = () =>{
+  //  const prepare=  store.collection('orden').doc(data.id);
+  //   return prepare.update({
+  //     state:'Preparacion'})
+  //     .then(() => {
+  //       alert('pedido a preparacion')
+  //     })
+  //     .catch(() => {
+  //     });
+  // }
 
   const PendienteToPrepare = () =>{
-    store.collection('orden').doc().update({state:'Preparacion'})
-    
-    
+    console.log(data, "data")
+    console.log(data, "data")
+    store.collection('orden').doc(data()).update({
+      state:'Preparacion',
+
+    });
   }
 
   return (
     <div>
       <div className="Mesero-header">
         <img className="Logo-Mesero" src={proyecto6} alt="" />
-        <button onClick={() => history.goBack()}>Volver</button>
+        <button className="btnReturn" onClick={() => history.goBack()}>Volver</button>
       </div>
       <div className="bodyCocina">
         <div>
@@ -46,7 +59,7 @@ const CocinaPedidos = () => {
               
               <div className="boxOrden" key={docs.id}>
                 <p>{docs.pedido}</p>
-                <button target={docs.id} onClick={ () =>PendienteToPrepare}>enviar a preparacion</button>
+                <button onClick={()=>PendienteToPrepare()}>enviar a preparacion</button>
               </div>
             ))
           ) : (

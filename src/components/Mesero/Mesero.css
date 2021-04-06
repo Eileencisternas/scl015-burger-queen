@@ -156,7 +156,7 @@
 .enviar-cocina{
     /* position: static; */
      margin: 5px; 
-     width: 176px;
+     width: 140px;
      height: 56px;
     background: #78BB55;
     border-radius: 15px;
@@ -186,7 +186,7 @@
 
 .cancelar-pedido{
     /* position: relative; */
-    width: 176px;
+    width: 140px;
     height: 56px;
     left: 20px;
     background: #FF0000;
@@ -247,9 +247,7 @@
     border-color: rgb(243, 204, 0) !important;
 }
 
-.btnReturn{
-    
-}
+
 
 /* formato para Tablet
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait){
