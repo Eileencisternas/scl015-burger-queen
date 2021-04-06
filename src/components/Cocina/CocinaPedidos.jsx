@@ -6,6 +6,7 @@ import proyecto6 from "../Home/ImgHome/proyecto6.png";
 import "./Cocina.css";
 import uuid from 'react-uuid'
 
+
 const CocinaPedidos = () => {
   const [data, setData] = useState([]);
   const [preparacion, setPreparacion] = useState([]);
@@ -18,9 +19,7 @@ const CocinaPedidos = () => {
     (`00${date.getSeconds()}`).slice(-2)}`;
 
   useEffect(() => {
-    store
-      .collection("orden")
-      .get()
+    store.collection("orden").get()
       .then((querySnapshot) => {
         const docs = [];
         querySnapshot.forEach((doc) => {
@@ -130,16 +129,16 @@ const CocinaPedidos = () => {
     <div>
       <div className="Mesero-header">
         <img className="Logo-Mesero" src={proyecto6} alt="" />
-        <button onClick={() => history.goBack()}>Volver</button>
+        <button className="btnReturn" onClick={() => history.goBack()}>Volver</button>
       </div>
       <div className="bodyCocina">
-        <div>
-          <p>Pedidos Pendientes</p>
+        <div className="btnPendiente">
+          <p className="tituloPedidos">Pendientes</p>
                     {data.length ? (
             data.map((docs) => (
               
               <div className="boxOrden" key={docs.id}>
-                <p>id: {docs.id}</p>
+                <p>Cliente:{docs.cliente}</p>
                  <div>
                    
                   {docs.pedido.map((doc) => 
@@ -147,7 +146,7 @@ const CocinaPedidos = () => {
                     )}
                 
                  </div>
-                <button value={docs.id} onClick={ (e) => PendienteToPrepare(docs, e.target.value)}>enviar a preparacion</button>
+                <button className="btnEnvioOrden" value={docs.id} onClick={ (e) => PendienteToPrepare(docs, e.target.value)}>enviar a preparacion</button>
               </div>
             ))
           ) : (
@@ -155,12 +154,12 @@ const CocinaPedidos = () => {
           )}
         </div>
 
-        <div>
-          <p>Pedidos en Preparción</p>
+        <div className="btnPreparacion">
+          <p className="tituloPedidos">En Preparación</p>
           {preparacion.length ? (
             preparacion.map((dos) => (
               <div className="boxOrden" key={dos.id}>
-              <p>id: {dos.idPedido}</p>
+              <p>Cliente: {dos.cliente}</p>
                <div>
                  
                 {dos.pedido.map((doc) => 
@@ -168,7 +167,7 @@ const CocinaPedidos = () => {
                   )}
               
                </div>
-              <button value={dos.id} onClick={ (e) => prepareToFinish(dos, e.target.value)}>Pedido a Terminado</button>
+              <button className="btnEnvioOrden" value={dos.id} onClick={ (e) => prepareToFinish(dos, e.target.value)}>Enviar a Terminado</button>
             </div>
             ))
           ) : (
@@ -176,16 +175,16 @@ const CocinaPedidos = () => {
           )}
         </div>
 
-        <div>
-          <p>Pedidos Listos</p>
+        <div className="btnListo">
+          <p className="tituloPedidos">Terminado</p>
           {terminado.length ? (
              terminado.map((end) => (
               <div className="boxOrden" key={end.id}>
-              <p>id: {end.idPedido}</p>
+              {/* <p>id: {end.idPedido}</p> */}
               <p>cliente: {end.cliente}</p>
               <p>mesa: {end.mesa}</p>
               <p>mesero: {end.mesero}</p>
-               <div>
+               <div className="boxOrden">
                  
                 {end.pedido.map((doc) => 
                  <p> {doc}</p>
